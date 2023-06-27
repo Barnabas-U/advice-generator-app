@@ -1,0 +1,134 @@
+* {
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $Light-Cyan;
+}
+.attribution a {
+  text-decoration: none;
+  color: $Neon-Green;
+}
+
+@media (min-width: 200px) {
+  body {
+    background-color: $Dark-Blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    padding-top: 35%;
+
+    .wrapper {
+      position: relative;
+      background-color: $Dark-Grayish-Blue;
+      border-radius: 0.8em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6%;
+      margin-bottom: 6em;
+
+      .header {
+        color: $Neon-Green;
+        letter-spacing: 0.2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+
+      p {
+        color: $Light-Cyan;
+        font-size: x-large;
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        line-height: 1.5em;
+      }
+
+      .divider {
+        padding-bottom: 3em;
+      }
+
+      .dice-btn {
+        position: absolute;
+        bottom: -2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $Neon-Green;
+        height: 4em;
+        width: 4em;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  body {
+    padding-top: 10%;
+
+    .wrapper {
+      width: 40%;
+      margin-bottom: 3em;
+
+      .header {
+        font-size: medium;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      p {
+        font-size: larger;
+      }
+
+      .divider {
+        padding-bottom: 0em;
+      }
+
+      .dice-btn {
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          box-shadow: 1px 1px 10px 3px $Neon-Green;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding-top: 20%;
+
+    .wrapper {
+      width: 30%;
+      margin-bottom: 8em;
+
+      .header {
+        font-size: large;
+      }
+
+      p {
+        font-size: x-large;
+      }
+    }
+  }
+}
